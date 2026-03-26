@@ -9,8 +9,24 @@ const create = (newUser) => {
 
     return newUser
 }
+const findById = () => {
+    const id = 1 
+    
+    const tamanhoArray = users.length
+
+    let acheiUsuario = null
+    
+    for (let i = 0; i < tamanhoArray; i++){
+        if ( users[i].id == id){
+           acheiUsuario = users[i] 
+        }
+            
+    }
+    return acheiUsuario
+}
 
 module.exports = {
     findAll,
-    create
+    create,
+    findById
 }

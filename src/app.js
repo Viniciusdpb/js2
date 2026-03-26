@@ -4,7 +4,7 @@ const userController = require("./controllers/userController")
 
 const app = express()
 app.get("/", (request, response) => {
-    response.send("aaaaaaaaaaa")
+    response.send("aaaaaaaaaa")
 })
 
 app.use(express.json())

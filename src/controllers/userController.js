@@ -32,9 +32,11 @@ const createUser = (req, res) => {
     const createdUser = userModel.create(newUser)
 
     res.status(201).json(createdUser)
-}
 
+}
+console.log(userModel.findById())
 module.exports = {
     getAllUsers,
     createUser
+    
 }
