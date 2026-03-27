@@ -10,7 +10,7 @@ const create = (newUser) => {
     return newUser
 }
 const findById = () => {
-    const id = 1 
+    const id = 1
     
     const tamanhoArray = users.length
 
