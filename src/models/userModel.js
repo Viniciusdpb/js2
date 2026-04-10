@@ -9,24 +9,62 @@ const create = (newUser) => {
 
     return newUser
 }
-const findById = () => {
-    const id = 1
-    
-    const tamanhoArray = users.length
 
-    let acheiUsuario = null
-    
-    for (let i = 0; i < tamanhoArray; i++){
-        if ( users[i].id == id){
-           acheiUsuario = users[i] 
-        }
-            
+const findById = (id) =>{
+
+    /*for ( let i = 0; i < users.length; i++ ){
+        if (users[i].id == id ) {
+         return users[i]
+        }       
     }
-    return acheiUsuario
+
+    return null*/
+
+    return users.find( user => user.id == id ) // isso faz o mesmo que o de cima
+}
+
+const update = (id, newUser) => {
+    const user = users.find( user => user.id == id )
+
+    if ( !user ) {
+        return undefined
+    }
+
+    // user = {
+    //     id: user.id,
+    //     name: newUser.name,
+    //     age: newUser.age
+    // }
+
+    if (newUser.name) {
+            user.name = newUser.name
+    }
+
+    if (newUser.age) {
+            user.age = newUser.age
+    }
+
+    return user
+}
+
+const remove = (id) => {
+    const index = users.findIndex(user => user.id === id)
+
+    const user = users[index]
+
+    if ( !user ) {
+        return undefined
+    }
+
+    users.splice(index, 1)
+
+    return user
 }
 
 module.exports = {
     findAll,
     create,
-    findById
+    findById,
+    update,
+    remove
 }

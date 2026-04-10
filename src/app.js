@@ -1,18 +1,14 @@
 const express = require("express")
-
-const userController = require("./controllers/userController")
-
 const app = express()
+
+const userRoutes = require("./routes/userRoutes")
+
 app.get("/", (request, response) => {
     response.send("aaaaaaaaaa")
 })
 
 app.use(express.json())
 
-app.post("/users", userController.createUser)
-
-app.get("/users", userController.getAllUsers)
-
-app.get("/users/:id", userController.getUserById)
+app.use("/", userRoutes)
 
 module.exports = app

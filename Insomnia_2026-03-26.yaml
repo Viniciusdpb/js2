@@ -8,14 +8,14 @@ meta:
   description: ""
 collection:
   - url: localhost:3000
-    name: testa api
+    name: teste
     meta:
-      id: req_00b8616ae1644681bfcbe6c71825556f
-      created: 1773959361959
-      modified: 1773959738922
+      id: req_305c270d5a1142f896d4b061510f05da
+      created: 1773959385000
+      modified: 1773959735685
       isPrivate: false
       description: ""
-      sortKey: -1773959361959
+      sortKey: -1773959385000
     method: GET
     headers:
       - name: User-Agent
@@ -31,14 +31,14 @@ collection:
         store: true
       rebuildPath: true
   - url: localhost:3000/users
-    name: lista usuários
+    name: lista_usuarios
     meta:
-      id: req_d17ab93e49704b5291e35eb9cef4c8ef
-      created: 1773960291080
-      modified: 1773960340020
+      id: req_4dda7b41ef644ef9856bcd96d0d581ad
+      created: 1773960330283
+      modified: 1773960448849
       isPrivate: false
       description: ""
-      sortKey: -1773960291080
+      sortKey: -1773960330283
     method: GET
     headers:
       - name: User-Agent
@@ -53,22 +53,22 @@ collection:
         send: true
         store: true
       rebuildPath: true
-  - url: localhost:3000/users
-    name: cadastra usuário
+  - url: localhost:3000/users/
+    name: cadastra_usuario
     meta:
-      id: req_4f8b9a26e0be493ea44ac70f2641d8e3
-      created: 1773960387235
-      modified: 1773962668561
+      id: req_9f2ea8e70c95435099b3d687e5684105
+      created: 1773960395628
+      modified: 1775172418552
       isPrivate: false
       description: ""
-      sortKey: -1773960387235
+      sortKey: -1773960395628
     method: POST
     body:
       mimeType: application/json
       text: |-
         {
-        	"name" : "Marcelo",
-        	"age" : 21
+        	"name": "Pedro Miguel",
+        	"age": 14
         }
     headers:
       - name: Content-Type
@@ -85,16 +85,94 @@ collection:
         send: true
         store: true
       rebuildPath: true
+  - url: localhost:3000/users/1
+    name: Busca_usuario_por_ID
+    meta:
+      id: req_e18624c6c5fa4af8a1e784390f6a533c
+      created: 1774570484232
+      modified: 1775172691059
+      isPrivate: false
+      description: ""
+      sortKey: -1774570484232
+    method: GET
+    headers:
+      - name: User-Agent
+        value: insomnia/12.1.0
+        description: ""
+        disabled: false
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+  - url: localhost:3000/users/1775178977998
+    name: Atualiza_usuario
+    meta:
+      id: req_a4fada9f901d4fcb8af14b447c6fe680
+      created: 1775172170715
+      modified: 1775178994760
+      isPrivate: false
+      description: ""
+      sortKey: -1775172170715
+    method: PUT
+    body:
+      mimeType: application/json
+      text: |-
+        {
+        	"name": "Pedro Miguel Moreira Medeiros",
+        	"age": 14
+        }
+    headers:
+      - name: Content-Type
+        value: application/json
+      - name: User-Agent
+        value: insomnia/12.1.0
+        description: ""
+        disabled: false
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+  - url: localhost:3000/users/2
+    name: Remove_usuario
+    meta:
+      id: req_00865999c87a4ff78c56bba7bc1ecd8a
+      created: 1775177645492
+      modified: 1775178250149
+      isPrivate: false
+      description: ""
+      sortKey: -1774265439930
+    method: DELETE
+    headers:
+      - name: User-Agent
+        value: insomnia/12.1.0
+        description: ""
+        disabled: false
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
 cookieJar:
   name: Default Jar
   meta:
     id: jar_99d30891da4bdcebc63947a8fc17f076de878684
-    created: 1774563332269
-    modified: 1774563332269
+    created: 1775169211863
+    modified: 1775169211863
 environments:
   name: Base Environment
   meta:
     id: env_99d30891da4bdcebc63947a8fc17f076de878684
-    created: 1774563332265
-    modified: 1774563332265
+    created: 1775169211860
+    modified: 1775169211860
     isPrivate: false
